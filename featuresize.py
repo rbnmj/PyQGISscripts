@@ -11,7 +11,7 @@ def featuresize(layername=None):
     if len(selected_features) == 0:
         return print("No features selected.")
     areas = {}
-    # Check the geometry type of the layer and calculate the size for each selected feature
+    # Check the geometry type of the layer and fetch the size for each selected feature
     if layer.geometryType() == QgsWkbTypes.PolygonGeometry:
         for feature in selected_features:
             area = feature.geometry().area()
